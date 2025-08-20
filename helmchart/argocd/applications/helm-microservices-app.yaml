@@ -7,12 +7,12 @@ spec:
   project: default
 
   source:
-    repoURL: 'https://github.com/your-org/ecommerce-gitops.git'   # 🔹 your Git repo
-    targetRevision: main                                          # 🔹 branch/tag
-    path: helmchart/microservices                                 # 🔹 chart path in repo
+    repoURL: 'https://github.com/babsontimie/ecommerce-gitops.git'    #🔹 your Git repo
+    targetRevision: main                                              # 🔹 branch/tag
+    path: helmchart/microservices                                     # 🔹 chart path in repo
     helm:
       valueFiles:
-        - values.yaml                                             # use your values file
+        - dev-values.yaml                                         # use your values file
 
   destination:
     server: https://kubernetes.default.svc
